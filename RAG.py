@@ -45,7 +45,7 @@ def create_rag_chain():
 
     # 1. CARREGAR JSON - mas convertendo para string depois
     loader = JSONLoader(
-        "documents/products_catalog.json",
+        "products_catalog.json",
         jq_schema=".",
         text_content=False
     )
@@ -197,4 +197,5 @@ def create_rag_chain():
     )
 
     return chain_with_history
+
 
