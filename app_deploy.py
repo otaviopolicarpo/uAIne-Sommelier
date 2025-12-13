@@ -26,7 +26,7 @@ os.environ.setdefault("LANGCHAIN_CALLBACKS_BACKGROUND", os.environ.get("LANGCHAI
 
 st.set_page_config(page_title="uAIne 🍷", page_icon="🍇")
 st.title("🍷 uAIne – Concierge Enólogo Virtual")
-st.write("Pergunte sobre vinhos, harmonizações, ocasiões especiais e encontre a escolha certa do catálogo Vila Vinho.")
+st.write("Pergunte sobre vinhos, harmonizações, ocasiões especiais e encontre a escolha certa do catálogo Vila Vinhos!")
 
 
 # =========================================================
@@ -215,3 +215,4 @@ if user_input:
 
     # Salvar no histórico (sanitização apenas na exibição)
     st.session_state.chat_history.append({"role": "assistant", "html": html})
+
