@@ -17,7 +17,7 @@ if LANGCHAIN_KEY:
     os.environ.setdefault("LANGCHAIN_API_KEY", LANGCHAIN_KEY)
 
 # habilitar tracing V2
-os.environ.setdefault("LANGCHAIN_TRACING_V2", os.environ.get("LANGCHAIN_TRACING_V2", "true"))
+os.environ.setdefault("LANGCHAIN_TRACING", os.environ.get("LANGCHAIN_TRACING", "true"))
 os.environ.setdefault("LANGCHAIN_ENDPOINT", os.environ.get("LANGCHAIN_ENDPOINT", "https://api.smith.langchain.com"))
 os.environ.setdefault("LANGCHAIN_PROJECT", os.environ.get("LANGCHAIN_PROJECT","AdeguIA"))
 os.environ.setdefault("LANGCHAIN_CALLBACKS_BACKGROUND", os.environ.get("LANGCHAIN_CALLBACKS_BACKGROUND", "true"))
@@ -25,7 +25,7 @@ os.environ.setdefault("LANGCHAIN_CALLBACKS_BACKGROUND", os.environ.get("LANGCHAI
 
 
 st.set_page_config(page_title="uAIne 🍷", page_icon="🍇")
-st.title("🍷 uAIne – Concierge Enólogo Virtual")
+st.title("🍷 uAIne – Sommelier Virtual da Vila Vinhos")
 st.write("Pergunte sobre vinhos, harmonizações, ocasiões especiais e encontre a escolha certa do catálogo Vila Vinhos!")
 
 
@@ -215,4 +215,5 @@ if user_input:
 
     # Salvar no histórico (sanitização apenas na exibição)
     st.session_state.chat_history.append({"role": "assistant", "html": html})
+
 
