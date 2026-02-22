@@ -62,8 +62,8 @@ def create_rag_chain():
 
     # 2. SPLITTER
     recur_split = RecursiveCharacterTextSplitter(
-        chunk_size=500,
-        chunk_overlap=100,
+        chunk_size=750,
+        chunk_overlap=160,
         separators=["}, {"]
     )
     document_split = recur_split.split_documents(documentos)
@@ -198,6 +198,7 @@ def create_rag_chain():
     )
 
     return chain_with_history
+
 
 
 
